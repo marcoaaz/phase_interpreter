@@ -13,7 +13,7 @@
 
 Phase interpreter assists researchers in saving mineral phase maps and performing basic image analysis that are essential to study geological processes. It generates a structured output folder with files corresponding to the selected analyses for each 'Trial tag' (see interface) to support findings and encourage future (or retrospective) reuse of research data (thin sections, polished blocks, resin mounts).
 
-The tool is especially useful for users wanting to combine the capabilities/power of light microscopy and X-ray/electron microscope imaging systems. Previous image analysis (segmentation) is done in [QuPath](https://qupath.github.io/) ([Bankhead et al., 2017](https://www.nature.com/articles/s41598-017-17204-5)) using the [pixel classifier](https://qupath.readthedocs.io/en/stable/docs/tutorials/pixel_classification.html) tool.
+The tool is useful for users wanting to combine the capabilities/power of light microscopy and X-ray/electron microscope imaging systems using a much larger image analysis pipeline (see citations at the bottom of page). Previous image analysis (segmentation) is done in [QuPath](https://qupath.github.io/) ([Bankhead et al., 2017](https://www.nature.com/articles/s41598-017-17204-5)) using the [pixel classifier](https://qupath.readthedocs.io/en/stable/docs/tutorials/pixel_classification.html) tool.
 
 <img width=50% height=50% alt="Image" src="https://github.com/user-attachments/assets/f877cfdc-0c85-43ca-9a77-73cf2462cce1" />
 
@@ -105,6 +105,7 @@ Java Version: Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit
 - The following research papers have already contributed to its evolution:
   - Acevedo Zamora, M. A., & Kamber, B. S. (2023). Petrographic Microscopy with Ray Tracing and Segmentation from Multi-Angle Polarisation Whole-Slide Images. Minerals, 13(2), 156. https://doi.org/10.3390/min13020156 
   - Acevedo Zamora, M. A., Kamber, B. S., Jones, M. W. M., Schrank, C. E., Ryan, C. G., Howard, D. L., Paterson, D. J., Ubide, T., & Murphy, D. T. (2024). Tracking element-mineral associations with unsupervised learning and dimensionality reduction in chemical and optical image stacks of thin sections. Chemical Geology, 650, 121997. https://doi.org/10.1016/j.chemgeo.2024.121997
+  - Acevedo Zamora, M. (2024). Petrographic microscopy of geologic textural patterns and element-mineral associations with novel image analysis methods [Thesis by publication, Queensland University of Technology]. Brisbane. https://eprints.qut.edu.au/248815/
   - Ubide, T., Murphy, D. T., Emo, R. B., Jones, M. W. M., Acevedo Zamora, M. A., & Kamber, B. S. (2025). Early pyroxene crystallisation deep below mid-ocean ridges. Earth and Planetary Science Letters, 663, 119423. https://doi.org/10.1016/j.epsl.2025.119423 
   - Kamber, B. S., Acevedo Zamora, M. A., Rodrigues, R. F., Li, M., Yaxley, G. M., & Ng, M. (2025). Exploring High PT Experimental Charges Through the Lens of Phase Maps. Minerals, 15(4), 355. https://doi.org/10.3390/min15040355
   - Rodrigues, R. F., Yaxley, G. M., & Kamber, B. S. (2025). Phase relations and solidus temperature of garnet lherzolite at 5 GPa revisited. Contributions to Mineralogy and Petrology, 180(9), 57. https://doi.org/10.1007/s00410-025-02250-4 
