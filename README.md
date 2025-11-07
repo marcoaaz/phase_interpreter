@@ -13,7 +13,7 @@
 
 Phase interpreter assists researchers in saving mineral phase maps and performing basic image analysis that are essential to study geological processes. It generates a structured output folder with files corresponding to the selected analyses for each 'Trial tag' (see interface) to support findings and encourage future (or retrospective) reuse of research data (thin sections, polished blocks, resin mounts).
 
-The tool is useful for users wanting to combine the capabilities/power of light microscopy and X-ray/electron microscope imaging systems using a much larger image analysis pipeline (see citations at the bottom of page). Previous image analysis (segmentation) is done in [QuPath](https://qupath.github.io/) ([Bankhead et al., 2017](https://www.nature.com/articles/s41598-017-17204-5)) using the [pixel classifier](https://qupath.readthedocs.io/en/stable/docs/tutorials/pixel_classification.html) tool.
+The tool is useful for users wanting to combine the capabilities of light microscopy and X-ray/electron microscope imaging systems using a much larger image analysis pipeline (see citations at the bottom of page). Previous image analysis (segmentation) is done in [QuPath](https://qupath.github.io/) ([Bankhead et al., 2017](https://www.nature.com/articles/s41598-017-17204-5)) using the [pixel classifier](https://qupath.readthedocs.io/en/stable/docs/tutorials/pixel_classification.html) tool.
 
 <img width=60% height=60% alt="Image" src="https://github.com/user-attachments/assets/f877cfdc-0c85-43ca-9a77-73cf2462cce1" />
 
@@ -94,15 +94,17 @@ Java Version: Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit
   - for_redistribution: installer that can be shared with others (users not having MatLab runtime)
   - for_redistribution_files_only: executable (when having the runtime)
   - for_testing: executable (when having the runtime)
-- If requiring an example dataset to operate the software, please, contact me
-
+- Contact me if:
+  - Requiring an example dataset to operate the software
+  - Having issues to compile or wanting to make a new branch/pull request that I need to revise
+    
 ## Issues and future work
--This is a beta version that will soon be improved with user feedback
--If having issues to compile or wanting to make a new branch/pull request, contact me as well
+- This is a beta version that will soon be improved with user feedback
+- I had in mind making TESCAN TIMA mineral liberation maps compatible with Phase interpreter.
+- If you are not familiar to coding but have a bunch of ideas, contact me as well. This is open-source :smiley:
 
 ## Citing Phase interpreter
-- This software depends on open-source software components (QuPath is in ongoing development) and scientific citations/feedback
-- The following research papers have already contributed to its evolution:
+- This software depends on open-source software components (in ongoing development) and scientific citations/feedback. The following research papers already have contributed to its evolution:
   - Acevedo Zamora, M. A., & Kamber, B. S. (2023). Petrographic Microscopy with Ray Tracing and Segmentation from Multi-Angle Polarisation Whole-Slide Images. Minerals, 13(2), 156. https://doi.org/10.3390/min13020156 
   - Acevedo Zamora, M. A., Kamber, B. S., Jones, M. W. M., Schrank, C. E., Ryan, C. G., Howard, D. L., Paterson, D. J., Ubide, T., & Murphy, D. T. (2024). Tracking element-mineral associations with unsupervised learning and dimensionality reduction in chemical and optical image stacks of thin sections. Chemical Geology, 650, 121997. https://doi.org/10.1016/j.chemgeo.2024.121997
   - Acevedo Zamora, M. (2024). Petrographic microscopy of geologic textural patterns and element-mineral associations with novel image analysis methods [Thesis by publication, Queensland University of Technology]. Brisbane. https://eprints.qut.edu.au/248815/
