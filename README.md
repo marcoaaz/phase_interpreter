@@ -15,7 +15,7 @@ Phase interpreter assists researchers in saving mineral phase maps and performin
 
 The tool is useful for users wanting to combine the capabilities/power of light microscopy and X-ray/electron microscope imaging systems using a much larger image analysis pipeline (see citations at the bottom of page). Previous image analysis (segmentation) is done in [QuPath](https://qupath.github.io/) ([Bankhead et al., 2017](https://www.nature.com/articles/s41598-017-17204-5)) using the [pixel classifier](https://qupath.readthedocs.io/en/stable/docs/tutorials/pixel_classification.html) tool.
 
-<img width=50% height=50% alt="Image" src="https://github.com/user-attachments/assets/f877cfdc-0c85-43ca-9a77-73cf2462cce1" />
+<img width=60% height=60% alt="Image" src="https://github.com/user-attachments/assets/f877cfdc-0c85-43ca-9a77-73cf2462cce1" />
 
 ---
 
