@@ -15,7 +15,7 @@ Phase interpreter assists researchers in saving mineral phase maps and performin
 
 The tool is especially useful for users wanting to combine the capabilities/power of light microscopy and X-ray/electron microscope imaging systems. Previous image analysis (segmentation) is done in [QuPath](https://qupath.github.io/) ([Bankhead et al., 2017](https://www.nature.com/articles/s41598-017-17204-5)) using the [pixel classifier](https://qupath.readthedocs.io/en/stable/docs/tutorials/pixel_classification.html) tool.
 
-<img width=60% height=60% alt="Image" src="https://github.com/user-attachments/assets/f877cfdc-0c85-43ca-9a77-73cf2462cce1" />
+<img width=50% height=50% alt="Image" src="https://github.com/user-attachments/assets/f877cfdc-0c85-43ca-9a77-73cf2462cce1" />
 
 ---
 
@@ -84,10 +84,10 @@ Java Version: Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit
 ## ⌨️ Creating the Executable
 
 1. Open **MatLab > App Designer**   
-2.  Open "Phaseinterpreterv1.prj"3.  
-4.  Go to App Designer > Share > Standalone Desktop App
-5.  Within Apps required for your application to run, add the folders of the additional libraries (living within your PC)
-6.  Click "Package" button while having selected "Runtime included in package" (for future users not having MatLab runtime)
+2. Open "Phaseinterpreterv1.prj".  
+4. Go to App Designer > Share > Standalone Desktop App
+5. Within Apps required for your application to run, add the folders of the additional libraries (living within your PC)
+6. Click "Package" button while having selected "Runtime included in package" (for future users not having MatLab runtime)
 
 ## 📦 Packaged Executable (proved to work in Windows 11)
 - A folder "Phaseinterpreterv1" will appear containing:
@@ -108,10 +108,6 @@ Java Version: Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit
   - Ubide, T., Murphy, D. T., Emo, R. B., Jones, M. W. M., Acevedo Zamora, M. A., & Kamber, B. S. (2025). Early pyroxene crystallisation deep below mid-ocean ridges. Earth and Planetary Science Letters, 663, 119423. https://doi.org/10.1016/j.epsl.2025.119423 
   - Kamber, B. S., Acevedo Zamora, M. A., Rodrigues, R. F., Li, M., Yaxley, G. M., & Ng, M. (2025). Exploring High PT Experimental Charges Through the Lens of Phase Maps. Minerals, 15(4), 355. https://doi.org/10.3390/min15040355
   - Rodrigues, R. F., Yaxley, G. M., & Kamber, B. S. (2025). Phase relations and solidus temperature of garnet lherzolite at 5 GPa revisited. Contributions to Mineralogy and Petrology, 180(9), 57. https://doi.org/10.1007/s00410-025-02250-4 
-
-
-
-
 
 Thank you.
 Marco
