@@ -1,5 +1,5 @@
 # Phase Interpreter
-# A tool to interpret mineral phases with modern microcopy image analysis tools.
+# A tool to interpret mineral phases elaborated with modern microcopy image analysis pipelines.
 
 **Version**: 1 (beta)  
 **Author**: Dr Marco Acevedo Z. (maaz.geologia@gmail.com)  
@@ -7,6 +7,8 @@
 **Date**: November 2025  
 **Citation**: [Acevedo Zamora & Kamber 2023](https://www.mdpi.com/2075-163X/13/2/156)  
 **Previous versions**: [Original repository](https://github.com/marcoaaz/Acevedo-Kamber/tree/main/QuPath_generatingMaps)  
+
+
 ---
 
 ## 📖 Overview
@@ -90,6 +92,7 @@ Java Version: Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit
 6. Click "Package" button while having selected "Runtime included in package" (for future users not having MatLab runtime)
 
 ## 📦 Packaged Executable (proved to work in Windows 11)
+
 - A folder "Phaseinterpreterv1" will appear containing:
   - for_redistribution: installer that can be shared with others (users not having MatLab runtime)
   - for_redistribution_files_only: executable (when having the runtime)
@@ -99,11 +102,16 @@ Java Version: Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit
   - Having issues to compile or wanting to make a new branch/pull request that I need to revise
     
 ## Issues and future work
+
 - This is a beta version that will soon be improved with user feedback
-- I had in mind making TESCAN TIMA mineral liberation maps compatible with Phase interpreter.
-- If you are not familiar to coding but have a bunch of ideas, contact me as well. This is open-source :smiley:
+- If you are not familiar to coding but have a bunch of ideas, contact me
+- I had in mind:
+  - Making TESCAN TIMA mineral liberation maps compatible with Phase interpreter
+  - Rewriting "Phase interpreter" in Python and enabling whole-slide imaging to match the capabilities of [Cube converter](https://github.com/marcoaaz/cube_converter), [Chemistry simplifier](https://github.com/marcoaaz/chemistry_simplifier), and [QuPath](https://qupath.github.io/)
+- I have not tried this software in Mac or Linux yet but it might be an easy fix 
 
 ## Citing Phase interpreter
+
 - This software depends on open-source software components (in ongoing development) and scientific citations/feedback. The following research papers already have contributed to its evolution:
   - Acevedo Zamora, M. A., & Kamber, B. S. (2023). Petrographic Microscopy with Ray Tracing and Segmentation from Multi-Angle Polarisation Whole-Slide Images. Minerals, 13(2), 156. https://doi.org/10.3390/min13020156 
   - Acevedo Zamora, M. A., Kamber, B. S., Jones, M. W. M., Schrank, C. E., Ryan, C. G., Howard, D. L., Paterson, D. J., Ubide, T., & Murphy, D. T. (2024). Tracking element-mineral associations with unsupervised learning and dimensionality reduction in chemical and optical image stacks of thin sections. Chemical Geology, 650, 121997. https://doi.org/10.1016/j.chemgeo.2024.121997
