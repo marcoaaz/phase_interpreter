@@ -1,5 +1,5 @@
 # Phase Interpreter
-# A tool to interpret mineral phases elaborated with modern microcopy image analysis pipelines.
+# A geoscientific tool to interpret mineral phase maps elaborated with modern microcopy image analysis pipelines.
 
 **Version**: 1 (beta)  
 **Author**: Dr Marco Acevedo Z. (maaz.geologia@gmail.com)  
@@ -110,9 +110,10 @@ Java Version: Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit
   - Rewriting "Phase interpreter" in Python and enabling whole-slide imaging to match the capabilities of [Cube converter](https://github.com/marcoaaz/cube_converter), [Chemistry simplifier](https://github.com/marcoaaz/chemistry_simplifier), and [QuPath](https://qupath.github.io/)
 - I have not tried this software in Mac or Linux yet but it might be an easy fix 
 
-## Citing Phase interpreter
+## Related papers
 
-- This software depends on open-source software components (in ongoing development) and scientific citations/feedback. The following research papers already have contributed to its evolution:
+This software depends on vibrant open-source software components and scientific citations/feedback. The following research papers already have contributed to its evolution directly or indirectly:
+
   - Acevedo Zamora, M. A., & Kamber, B. S. (2023). Petrographic Microscopy with Ray Tracing and Segmentation from Multi-Angle Polarisation Whole-Slide Images. Minerals, 13(2), 156. https://doi.org/10.3390/min13020156 
   - Acevedo Zamora, M. A., Kamber, B. S., Jones, M. W. M., Schrank, C. E., Ryan, C. G., Howard, D. L., Paterson, D. J., Ubide, T., & Murphy, D. T. (2024). Tracking element-mineral associations with unsupervised learning and dimensionality reduction in chemical and optical image stacks of thin sections. Chemical Geology, 650, 121997. https://doi.org/10.1016/j.chemgeo.2024.121997
   - Acevedo Zamora, M. (2024). Petrographic microscopy of geologic textural patterns and element-mineral associations with novel image analysis methods [Thesis by publication, Queensland University of Technology]. Brisbane. https://eprints.qut.edu.au/248815/
