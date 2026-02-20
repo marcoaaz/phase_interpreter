@@ -1,23 +1,33 @@
 # Phase Interpreter
 # A geoscientific tool to interpret mineral phase maps elaborated with modern microcopy image analysis pipelines.
 
-**Version**: 1 (beta)  
+**Version**: 1.1  
+**Binary download**: [Installer](https://zenodo.org/records/18705979) (for Windows 11)  
 **Author**: Dr Marco Acevedo Z. (maaz.geologia@gmail.com)  
 **Affiliation**: School of Earth and Atmospheric Sciences, Queensland University of Technology  
-**Date**: November 2025  
+**Date**: 20-February-2026  
 **Citation**: [Acevedo Zamora & Kamber 2023](https://www.mdpi.com/2075-163X/13/2/156)  
-**Previous versions**: [Original repository](https://github.com/marcoaaz/Acevedo-Kamber/tree/main/QuPath_generatingMaps)  
+**Previous repository**: [Scripts repository](https://github.com/marcoaaz/Acevedo-Kamber/tree/main/QuPath_generatingMaps)  
 
 
 ---
 
 ## 📖 Overview
 
-Phase interpreter assists researchers in saving mineral phase maps and performing basic image analysis that are essential to study geological processes. It generates a structured output folder with files corresponding to the selected analyses for each 'Trial tag' (see interface) to support findings and encourage future (or retrospective) reuse of research data (thin sections, polished blocks, resin mounts).
+Phase interpreter assists researchers in saving mineral phase maps and performing basic image analysis that are essential to study geological processes. It generates a structured output folder with files corresponding to the selected analyses for each out 'trial tag' (see interface) to support findings and encourage future (or retrospective) reuse of research data (thin sections, polished blocks, resin mounts, etc.)
 
-The tool is useful for users wanting to combine the capabilities of light microscopy and X-ray/electron microscope imaging systems using a much larger image analysis pipeline (see citations at the bottom of page). Previous image analysis (segmentation) is done in [QuPath](https://qupath.github.io/) ([Bankhead et al., 2017](https://www.nature.com/articles/s41598-017-17204-5)) using the [pixel classifier](https://qupath.readthedocs.io/en/stable/docs/tutorials/pixel_classification.html) tool.
+The tool is useful for users wanting to combine the capabilities of light microscopy and X-ray/electron microscope imaging systems using a much larger image analysis pipeline (see citations at the bottom of page). Previous image analysis (segmentation) is done in [QuPath] software (https://qupath.github.io/) ([Bankhead et al., 2017](https://www.nature.com/articles/s41598-017-17204-5)) using the [pixel classifier](https://qupath.readthedocs.io/en/stable/docs/tutorials/pixel_classification.html) tool or with [TIMA](https://tescan.com/product-portfolio/sem/tima) software (TESCAN). There also is support for [Iolite v4](https://iolite.xyz/) input/outputs using a special routine and script for compatibility.
 
-<img width=60% height=60% alt="Image" src="https://github.com/user-attachments/assets/f877cfdc-0c85-43ca-9a77-73cf2462cce1" />
+<p align="center">
+  <img width=50% height=50% alt="Image" src="https://github.com/user-attachments/assets/9f8053b3-aee1-4279-9c72-6d1a095ae36b" />
+</p>
+
+Regions of interest for image analysis loop with 'Draw ROIs' button:
+
+<p align="center">
+  <img width=65% height=65% alt="Image" src="https://github.com/user-attachments/assets/84baa1ea-94be-4412-b168-7d463560fffe" />
+</p>
+
 
 ---
 
@@ -121,5 +131,7 @@ This software depends on vibrant open-source software components and scientific 
   - Kamber, B. S., Acevedo Zamora, M. A., Rodrigues, R. F., Li, M., Yaxley, G. M., & Ng, M. (2025). Exploring High PT Experimental Charges Through the Lens of Phase Maps. Minerals, 15(4), 355. https://doi.org/10.3390/min15040355
   - Rodrigues, R. F., Yaxley, G. M., & Kamber, B. S. (2025). Phase relations and solidus temperature of garnet lherzolite at 5 GPa revisited. Contributions to Mineralogy and Petrology, 180(9), 57. https://doi.org/10.1007/s00410-025-02250-4 
 
-Thank you.
+
+Thank you.  
+
 Marco
