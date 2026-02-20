@@ -1,0 +1,139 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration build-checksum="1593967642" file="E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\quPath bridge\PhaseInterpreter_1.prj" location="E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\quPath bridge" name="PhaseInterpreter_1" preferred-package-location="E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\quPath bridge\PhaseInterpreter_1\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>PhaseInterpreter</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>1.1</param.version>
+    <param.authnamewatermark>Marco A. Acevedo Zamora</param.authnamewatermark>
+    <param.email>maaz.geologia@gmail.com</param.email>
+    <param.company>EAS, Queensland University of Technology</param.company>
+    <param.summary>Image analysis software interface to re-interpret QuPath/TIMA pixel classification as a mineral phase maps that can be interrogated.</param.summary>
+    <param.description>The graphical user interface (GUI) reads a pixel-classified map and interprets the classes as minerals that can be studied (analysed) or opened elsewhere. 
+
+Created: 20-Aug-24, Marco Acevedo Zamora
+Last update: 20-Feb-26, M.A.
+
+Scientific citation: Acevedo Zamora &amp; Kamber (2023)
+Publication: https://doi.org/10.3390/min13020156
+Source code: https://github.com/marcoaaz/phase_interpreter
+Old repository: https://github.com/marcoaaz/Acevedo-Kamber/tree/main/QuPath_generatingMaps
+
+Future updates include a Pythonic implementation for whole-slide images.</param.description>
+    <param.screenshot>${PROJECT_ROOT}\icons\diamond_article.png</param.screenshot>
+    <param.guid />
+    <param.installpath.string>\EAS, Queensland University of Technology\PhaseInterpreter\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\PhaseInterpreter_1\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\PhaseInterpreter_1\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\PhaseInterpreter_1\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\PhaseInterpreter_1</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>false</param.web.mcr>
+    <param.package.mcr>true</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>false</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <param.native.matlab>false</param.native.matlab>
+    <param.checkbox>false</param.checkbox>
+    <param.example />
+    <param.help.text>Syntax 
+	  -? 
+	 
+ Input Arguments 
+	 -?  print help on how to use the application 
+	 input arguments</param.help.text>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.install.notes />
+      <param.target.install.notes />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.create.log />
+      <param.log.file />
+      <param.native.matlab />
+      <param.checkbox />
+      <param.example />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\phase_interpreter_v1c.mlapp</file>
+    </fileset.main>
+    <fileset.resources>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\bfmatlab</file>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\external_package\rgb</file>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\external_package\xml2struct.m</file>
+      <file>${PROJECT_ROOT}\extension_geopixe</file>
+      <file>${PROJECT_ROOT}\extension_geopixe\Marco-region0.csv</file>
+      <file>${PROJECT_ROOT}\extension_iolite</file>
+      <file>${PROJECT_ROOT}\extension_TIMA</file>
+      <file>${PROJECT_ROOT}\functions_main</file>
+      <file>${PROJECT_ROOT}\functions_plot</file>
+      <file>${PROJECT_ROOT}\icons</file>
+      <file>${PROJECT_ROOT}\saveastiff_4.5</file>
+    </fileset.resources>
+    <fileset.package />
+    <fileset.depfun />
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\PhaseInterpreter_1\for_testing" name="readme.txt" optional="true">E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\quPath bridge\PhaseInterpreter_1\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\PhaseInterpreter_1\for_testing" name="splash.png" optional="false">E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\quPath bridge\PhaseInterpreter_1\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\PhaseInterpreter_1\for_testing" name="PhaseInterpreter.exe" optional="false">E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\quPath bridge\PhaseInterpreter_1\for_testing\PhaseInterpreter.exe</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2024b</root>
+      <toolboxes>
+        <toolbox name="fixedpoint" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

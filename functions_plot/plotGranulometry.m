@@ -37,7 +37,7 @@ hold off
 grid on
 % set(gca,'color',[0 0 0]) %black background
 ylim([0, Inf]);
-lgd = legend(h, minerals, 'Location', 'eastoutside', 'FontSize', fontSize*0.8);
+lgd = legend(h, minerals, 'Location', 'eastoutside', 'FontSize', fontSize*0.8, Interpreter='none');
 title(lgd, 'Minerals')
 title('Grain size distribution', 'FontSize', fontSize*1.2);
 xlabel('Sieve size (microns)');
@@ -57,7 +57,7 @@ end
 hold off
 grid on
 ylim([0, Inf]);
-lgd = legend(h, minerals, 'Location', 'eastoutside', 'FontSize', fontSize*0.8);
+lgd = legend(h, minerals, 'Location', 'eastoutside', 'FontSize', fontSize*0.8, Interpreter='none');
 title(lgd,'Minerals')
 title('Granulometry frequency', 'FontSize', fontSize*1.2);
 xlabel('Sieve size (microns)');
@@ -79,7 +79,7 @@ hold off
 grid on
 ylim([0, Inf]);
 lgd = legend([h1 h2], {'cummulative', 'frequencies'}, ...
-    'Location', 'eastoutside', 'FontSize', fontSize*0.8);
+    'Location', 'eastoutside', 'FontSize', fontSize*0.8, Interpreter='none');
 title(lgd, 'Line')
 title('Total cummulative and frequency', 'FontSize', fontSize*1.2);
 xlabel('Sieve size (microns)');

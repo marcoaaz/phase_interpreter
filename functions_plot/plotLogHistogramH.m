@@ -6,22 +6,22 @@ minerals_original = tablerank1.Mineral; %PM_names = table2cell(tablerank(:, 2))'
 triplet_original = [tablerank1.Triplet_1, tablerank1.Triplet_2, tablerank1.Triplet_3];
 pixelPopulations = tablerank1.Pixels; 
 
+n_masks = length(pixelPopulations);
+population_pct = 100*pixelPopulations/sum(pixelPopulations);
+
+x = 1:n_masks;
+y = pixelPopulations;
+
+
 %Plot
 fontSize = 9;
 text_y_offset = 1.4;
-
-n_masks = length(pixelPopulations);
-population_pct = 100*pixelPopulations/sum(pixelPopulations);
+min_value = 10^floor(log10(min(y)));
+max_value = 10^ceil(log10(max(y)));
 
 figure; 
 hFig=gcf;
 set(hFig, 'Position', [900 50 500 700]); %left-bottom width height
-
-x = 1:n_masks;
-y = pixelPopulations;
-min_value = 10^floor(log10(min(y)));
-max_value = 10^ceil(log10(max(y)));
-
 
 handleToThisBarSeries = gobjects(n_masks, 1);
 for i = 1:n_masks

@@ -1,0 +1,129 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="506324142" file="E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\quPath bridge\PhaseInterpreter_app.prj" location="E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\quPath bridge" name="PhaseInterpreter_app" target="target.mlapps" target-name="Package App">
+    <param.appname>PhaseInterpreter_app</param.appname>
+    <param.authnamewatermark>Marco A. Acevedo Zamora</param.authnamewatermark>
+    <param.email>maaz.geologia@gmail.com</param.email>
+    <param.company>EAS, Queensland University of Technology</param.company>
+    <param.icon />
+    <param.icons />
+    <param.summary>Image analysis software interface to re-interpret QuPath/TIMA pixel classification as a mineral phase maps that can be interrogated.</param.summary>
+    <param.description>The graphical user interface (GUI) reads a pixel-classified map and interprets the classes as minerals that can be studied (analysed) or opened elsewhere. 
+
+Created: 20-Aug-24, Marco Acevedo Zamora
+Last update: 20-Feb-26, M.A.
+
+Scientific citation: Acevedo Zamora &amp; Kamber (2023)
+Publication: https://doi.org/10.3390/min13020156
+Source code: https://github.com/marcoaaz/phase_interpreter
+Old repository: https://github.com/marcoaaz/Acevedo-Kamber/tree/main/QuPath_generatingMaps
+
+Future updates include a Pythonic implementation for whole-slide images.</param.description>
+    <param.screenshot>C:\Users\acevedoz\AppData\Local\Temp\tp11b9618c_39ab_4b5f_a9f7_a5f6c0affad9.png</param.screenshot>
+    <param.version>1.1</param.version>
+    <param.products.name>
+      <item>Computer Vision Toolbox</item>
+      <item>Image Processing Toolbox</item>
+      <item>Parallel Computing Toolbox</item>
+      <item>Signal Processing Toolbox</item>
+    </param.products.name>
+    <param.products.id>
+      <item>96</item>
+      <item>17</item>
+      <item>80</item>
+      <item>8</item>
+    </param.products.id>
+    <param.products.version>
+      <item>24.2</item>
+      <item>24.2</item>
+      <item>24.2</item>
+      <item>24.2</item>
+    </param.products.version>
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>fc6768f3-eef6-4f70-8bc8-e5c3d713e835</param.guid>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\phase_interpreter_v1c.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\bfmatlab\bfCheckJavaMemory.m</file>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\bfmatlab\bfCheckJavaPath.m</file>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\bfmatlab\bfGetFileExtensions.m</file>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\bfmatlab\bfGetPlane.m</file>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\bfmatlab\bfGetReader.m</file>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\bfmatlab\bfInitLogging.m</file>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\bfmatlab\bfopen.m</file>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\bfmatlab\bfTestInRange.m</file>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\bfmatlab\private\is_octave.m</file>
+      <file>E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\external_package\xml2struct.m</file>
+      <file>${PROJECT_ROOT}\extension_geopixe\geopixe_export_all.m</file>
+      <file>${PROJECT_ROOT}\extension_geopixe\geopixe_export_merged.m</file>
+      <file>${PROJECT_ROOT}\extension_geopixe\indWithinMAP_pro.m</file>
+      <file>${PROJECT_ROOT}\extension_geopixe\writeGeopixeRegion_Stream.m</file>
+      <file>${PROJECT_ROOT}\extension_TIMA\gridNumberer.m</file>
+      <file>${PROJECT_ROOT}\extension_TIMA\metadata_MinDIF.m</file>
+      <file>${PROJECT_ROOT}\extension_TIMA\read_MinDIF_map.m</file>
+      <file>${PROJECT_ROOT}\functions_main\adjacencyCheck_fast.m</file>
+      <file>${PROJECT_ROOT}\functions_main\binarise_map.m</file>
+      <file>${PROJECT_ROOT}\functions_main\edit_phasemap.m</file>
+      <file>${PROJECT_ROOT}\functions_main\grain_measurements_RAM.m</file>
+      <file>${PROJECT_ROOT}\functions_main\mapping_ROI_manager.m</file>
+      <file>${PROJECT_ROOT}\functions_main\phaseGranulometryFast.m</file>
+      <file>${PROJECT_ROOT}\functions_main\phasemap_rgb.m</file>
+      <file>${PROJECT_ROOT}\functions_main\phasemapAIM_fast.m</file>
+      <file>${PROJECT_ROOT}\functions_main\read_qupath_map.m</file>
+      <file>${PROJECT_ROOT}\functions_main\read_qupath_metadata.m</file>
+      <file>${PROJECT_ROOT}\functions_main\transform_map.m</file>
+      <file>${PROJECT_ROOT}\functions_plot\plot_phasemap.m</file>
+      <file>${PROJECT_ROOT}\functions_plot\plotGranulometry.m</file>
+      <file>${PROJECT_ROOT}\functions_plot\plotLogHistogramH.m</file>
+      <file>${PROJECT_ROOT}\functions_plot\plotLogHistogramH2.m</file>
+      <file>${PROJECT_ROOT}\functions_plot\plotStackedH_sorted.m</file>
+      <file>${PROJECT_ROOT}\icons\puzzle.png</file>
+      <file>${PROJECT_ROOT}\icons\QUT-Logo.png</file>
+    </fileset.depfun>
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="E:\Alienware_March 22\scripts_Marco\updated MatLab scripts" name="quPath bridge" optional="false">E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\quPath bridge</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2024b</root>
+      <toolboxes>
+        <toolbox name="fixedpoint" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

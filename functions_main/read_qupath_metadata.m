@@ -1,13 +1,19 @@
-function [minerals, triplet, destinationDir] = read_qupath_metadata(phasemap_inputName, suffix, rootFolder)
+function [minerals, triplet, destinationDir] = read_qupath_metadata(classifierName, rootFolder)
 %Script documentation:
 %Obtaining original colouring: 
 %https://levelup.gitconnected.com/how-to-convert-argb-integer-into-rgba-tuple-in-python-eeb851d65a88
 
+suffix = '.ome.tif';
+phasemap_inputName = strcat(classifierName, suffix);%default
+
 %Intermediate file names
 sampleName = strrep(phasemap_inputName, suffix, '');
 destinationDir = fullfile(rootFolder, sampleName);
-mkdir(destinationDir);
 fileName1 = fullfile(destinationDir, 'classifier_metadata.xlsx');
+
+if ~exist(destinationDir, 'dir')
+    mkdir(destinationDir);
+end 
 
 %Importing project metadata
 classifierFile = strrep(phasemap_inputName, '.ome.tif', '.json');
@@ -32,7 +38,6 @@ featureList = join(string(featureList), ', ');
 %expert annotations (name, colorRGB)
 outputClassificationLabels = outStruct.metadata.outputChannels;
 temp_table = struct2table(outputClassificationLabels);
-n_labels = size(temp_table, 1);
 
 %machine learning model
 classifierType = outStruct.pixel_classifier_type;

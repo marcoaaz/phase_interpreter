@@ -13,10 +13,9 @@
 %Previous version: 'qupathPhaseMap_v10_simplified.m'
 
 %Created: 20-Aug-24, Marco Acevedo Zamora
-%Updated: 26-Nov-24, 12-Mar-25, M.A.
+%Updated: 26-Nov-24, 12-Mar-25, 7-Nov-25, 11-Feb-26, M.A.
 
-%Citation:
-%Publication: https://doi.org/10.3390/min13020156
+%Citation: https://doi.org/10.3390/min13020156
 %Original code repository: https://github.com/marcoaaz/Acevedo-Kamber/tree/main/QuPath_generatingMaps
 
 %Information:
@@ -27,15 +26,30 @@
 close all
 clear
 clc
+format compact %displaying list
+
+%Dependencies
+scriptsMarco = 'E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\';            
+script_path = fullfile(scriptsMarco, 'quPath bridge');
+
+addpath(script_path);
+addpath(fullfile(script_path, 'functions_main'));
+addpath(fullfile(script_path, 'functions_plot'));
+addpath(fullfile(script_path, 'extension_TIMA'));
+addpath(fullfile(script_path, 'extension_iolite'));
+addpath(fullfile(script_path, 'extension_geopixe'));
+addpath(fullfile(scriptsMarco, 'bfmatlab'));
+addpath(fullfile(scriptsMarco, 'external_package\rgb'));
+
 
 %Manual User input:
-rootFolder = 'E:\Alienware_March 22\current work\rodrigo work\UHP32_benchmark\registration_11-Apr-24\registered\8bit\stack\qupath trial_14-Oct-25'; %qupath project
+rootFolder = 'H:\Collaborations\Balz-Rodrigo-Matthew collab\rodrigo work\UHP32_benchmark\registration_11-Apr-24\registered\8bit\stack\qupath trial_14-Oct-25'; %qupath project
 classifierName = 'run_s10-hrMaps'; %*.ome.tif saved from QuPath
 class_bg_txt = 'hole';
 kernel_size = 0;
 rot_angle = 90; %rotation angle (counter-clockwise)
 action_mirror = 0; %horizontal flip
-trial_tag = 'tag_sorted_cat3';
+trial_tag = 'tag_11feb26_1';
 mask_type = 'circle';
 manual_names_txt = 'Ol, Cpx, Grt, Opx, Spinel'; %{'Cpx', 'Grt', 'Hole', 'Ol', 'Opx'};
 selected_targets_txt = 'Opx, Grt, Cpx';
@@ -62,6 +76,8 @@ sizeMax = 60; %default=60 in pixels
 % resolution = app.PixelcalibrationmpxEditField.Value; %microns/pixel for GSD and stats
 % sizeMax = app.TopmeshpxEditField.Value; %default=60 in pixels
 
+%% Script begins
+
 %default
 class_bg_txt1 = regexprep(class_bg_txt, '\s*', '');
 class_bg = strsplit(class_bg_txt1, ',');
@@ -72,21 +88,6 @@ selected_targets = strsplit(selected_targets_txt1, ',');
 
 areaTH = 15; %px for grain measurements
 suffix = '.ome.tif';
-
-%Script begins
-
-
-%Dependencies
-scriptsMarco = 'E:\Alienware_March 22\scripts_Marco\updated MatLab scripts\';
-% addpath(scriptsMarco);
-script_path = fullfile(scriptsMarco, 'quPath bridge');
-addpath(script_path);
-addpath(fullfile(scriptsMarco, 'bfmatlab'));
-addpath(fullfile(scriptsMarco, 'external_package\rgb'));
-cd(script_path)
-format compact %displaying list
-
-
 phasemap_inputName = strcat(classifierName, suffix);%default
 
 [minerals, triplet, destinationDir] = read_qupath_metadata(phasemap_inputName, suffix, rootFolder);
@@ -154,6 +155,3 @@ plotStackedH_sorted(AIM_pct, tablerank3, manual_names0, tag_folder) %named left-
 %granulometry (grain size distribution)
 [finer_pixels, original_pixels] = phaseGranulometry(binary, sizeMax, tag_folder); %px
 plotGranulometry(finer_pixels, original_pixels, sizeMax, tablerank3, resolution, tag_folder) %microns
-
-
-

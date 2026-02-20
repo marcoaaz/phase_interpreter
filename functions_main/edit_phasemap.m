@@ -8,7 +8,7 @@ tablerank1.NewLabel = (1:n_phases)';
 
 phasemap1 = zeros(size(phasemap0), 'uint8'); %preallocate
 for i = 1:n_phases
-    temp_original = tablerank1.Label(i);
+    temp_original = tablerank1.Label(i) + 1; %for new mapping
     temp_new = tablerank1.NewLabel(i); %find ranking
 
     mask_phase = (phasemap0 == temp_original);    

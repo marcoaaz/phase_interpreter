@@ -6,10 +6,15 @@ minerals_original = tablerank1.Mineral; %PM_names = table2cell(tablerank(:, 2))'
 triplet_original = [tablerank1.Triplet_1, tablerank1.Triplet_2, tablerank1.Triplet_3];
 pixelPopulations = tablerank1.Pixels; 
 
-%Plot
 n_masks = length(pixelPopulations);
 population_pct = 100*pixelPopulations/sum(pixelPopulations);
 
+x = 1:n_masks;
+y = pixelPopulations;
+
+%Plot
+
+%setup
 hz_line_idx = find(population_pct < 1, 1); %
 if isempty(hz_line_idx)
     hz_line_x = (2*n_masks + 1)/2;
@@ -17,10 +22,6 @@ else
     hz_line_x = (2*hz_line_idx- 1)/2;
 end
 
-x = 1:n_masks;
-y = pixelPopulations;
-
-%setup
 text1 = 'Rock-forming';
 text2 = 'Accessories';
 min_value = 10^floor(log10(min(y)));

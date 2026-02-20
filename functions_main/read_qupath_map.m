@@ -1,14 +1,16 @@
 
-function [phasemap, section_mask, tablerank] = read_qupath_map(phasemap_inputName, class_bg, minerals, triplet, kernell_size, destinationDir)
+function [phasemap, section_mask, tablerank] = read_qupath_map(classifierName, class_bg, minerals, triplet, kernel_size, destinationDir)
 
-%% Reading Phase Map image pyramid (OME-TIFF)
+suffix = '.ome.tif';
+phasemap_inputName = strcat(classifierName, suffix);%default
 
+%Reading Phase Map image pyramid (OME-TIFF)
 parentDir = fileparts(destinationDir);
 input_file = fullfile(parentDir, phasemap_inputName);
 data = bfopen(input_file); %default
 series1 = data{1, 1};
 series1_plane1 = series1{1, 1}; %unmodified
-original_labels = unique(series1_plane1) + 1; %for new mapping
+original_labels = unique(series1_plane1); 
 
 % seriesCount = size(data, 1);
 % series1_planeCount = size(series1, 1);
@@ -41,9 +43,9 @@ if adequate_test > 0
     fg_mask = ~bg_mask; %default    
 
     %Finding foreground
-    if kernell_size == 0
+    if kernel_size == 0
         fg_mask_filled = imfill(bwareafilt(fg_mask, 2), 'holes');
-    elseif kernell_size >= 1
+    elseif kernel_size >= 1
         se = strel("diamond", kernel_size); %30
         fg_mask_filled = imfill(imdilate(fg_mask, se), 'holes');
     end
@@ -78,9 +80,11 @@ end
 tablerank_original = table(original_labels, minerals, population', triplet, ...
     'VariableNames', {'Label', 'Mineral', 'Pixels', 'Triplet'});
 
-bg_index = ismember(tablerank_original.Label, bg_label); %remove background
+label2 = tablerank_original.Label + 1; %for new mapping
+
+bg_index = ismember(label2, bg_label); %remove background
 tablerank0 = tablerank_original(~bg_index, :); 
 
-tablerank = sortrows(tablerank0, 3, 'descend'); %sort by number of pixels
+tablerank = sortrows(tablerank0, 'Pixels', 'descend'); %sort by number of pixels
 
 end

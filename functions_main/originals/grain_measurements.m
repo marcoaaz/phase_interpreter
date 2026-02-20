@@ -1,4 +1,4 @@
-function [sub_stats2] = grain_measurements(binary, tablerank3, areaTH, destinationDir)
+function [sub_stats3] = grain_measurements(binary, tablerank3, areaTH, destinationDir)
 %Statistics: grain measurements using binaries (extracted from shapeStatistics_v3.m)
 
 label_ID = tablerank3.NewLabel;
@@ -12,10 +12,7 @@ calculated_variables = {
     'Label_ID', 'Area_ID', ...
     'aspectRatio', 'shapeIndex', 'numberInclusions'};
 variable_names = [calculated_variables, chosen_variables];
-
-n_variables1 = length(calculated_variables);
-n_variables2 = length(chosen_variables);
-n_variables = n_variables1 + n_variables2;
+n_variables = length(variable_names);
 
 stats_cell = cell(1, n_labels2);
 for k = 1:n_labels2
@@ -26,7 +23,6 @@ for k = 1:n_labels2
     n_areas = size(stats, 1);
     
     if n_areas > 0
-
         label_ID2 = repmat(label_ID(k), [n_areas, 1]);
         area_ID = [1:n_areas]';    
         
@@ -37,21 +33,18 @@ for k = 1:n_labels2
         
         stats_temp = addvars(stats, ...
             label_ID2, area_ID, aspectRatios, shapeIndexes, n_inclusions, ...
-            'Before', 'Area', 'NewVariableNames', calculated_variables); %Adding labels
-    
-        stats_cell{k} = stats_temp;
+            'Before', 'Area', 'NewVariableNames', calculated_variables); %Adding labels    
+        
     else
         stats_temp = array2table(zeros(1, n_variables), 'VariableNames',variable_names);
-        stats_cell{k} = stats_temp;
+        
     end
-    
+    stats_cell{k} = stats_temp;
 end
 stats2 = vertcat(stats_cell{:});
-stats2 = stats2(stats2.Area > areaTH, :);%15, optional: filter by area
+stats3 = stats2(stats2.Area > areaTH, :);%15, optional: filter by area
+sub_stats3 = stats3(:, variable_names);
 
-%Chosen stats
-sub_stats2 = stats2(:, chosen_variables);
-
-writetable(sub_stats2, fullfile(destinationDir, 'shape_stats.xlsx'))
+writetable(sub_stats3, fullfile(destinationDir, 'shape_stats.xlsx'))
 
 end
