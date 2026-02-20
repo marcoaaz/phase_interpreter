@@ -2,7 +2,7 @@
 # A geoscientific tool to interpret mineral phase maps elaborated with modern microcopy image analysis pipelines.
 
 **Version**: 1.1  
-**Binary download**: [Installer](https://zenodo.org/records/18705979) (for Windows 11)  
+**Binary download**: [Installer](https://zenodo.org/records/18707639) (for Windows 11)  
 **Author**: Dr Marco Acevedo Z. (maaz.geologia@gmail.com)  
 **Affiliation**: School of Earth and Atmospheric Sciences, Queensland University of Technology  
 **Date**: 20-February-2026  
