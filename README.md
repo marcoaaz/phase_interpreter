@@ -97,9 +97,12 @@ Java Version: Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit
 
 1. Open **MatLab > App Designer**   
 2. Open "Phaseinterpreterv1.prj".  
-4. Go to App Designer > Share > Standalone Desktop App
-5. Within Apps required for your application to run, add the folders of the additional libraries (living within your PC)
-6. Click "Package" button while having selected "Runtime included in package" (for future users not having MatLab runtime)
+3. Go to App Designer > Share > Standalone Desktop App.  
+4. Within Apps required for your application to run, add the folders of the additional libraries (living within your PC).
+   <p align="center">
+      <img width=50% height=50% alt="Image" src="https://github.com/user-attachments/assets/23658d39-3446-4df0-b846-bbdfdbc206e6" />
+   </p>  
+5. Click "Package" button while having selected "Runtime included in package" (for future users not having MatLab runtime).  
 
 ## 📦 Packaged Executable (proved to work in Windows 11)
 
